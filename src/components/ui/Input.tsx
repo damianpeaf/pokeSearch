@@ -28,6 +28,7 @@ export const Input: FC<InputProps> = ({ value, onChange }) => {
             rounded-tl-lg
             rounded-bl-lg
             "
+            autoComplete="off"
         />
     )
 }

@@ -26,9 +26,29 @@ export interface Ability {
 }
 
 export interface Species {
-    name: string;
+    name: PokemonTypesName;
     url: string;
 }
+
+export type PokemonTypesName =
+    | 'bug'
+    | 'dark'
+    | 'dragon'
+    | 'electric'
+    | 'fairy'
+    | 'fighting'
+    | 'fire'
+    | 'flying'
+    | 'ghost'
+    | 'grass'
+    | 'ground'
+    | 'ice'
+    | 'normal'
+    | 'poison'
+    | 'psychic'
+    | 'rock'
+    | 'steel'
+    | 'water'
 
 export interface GameIndex {
     game_index: number;

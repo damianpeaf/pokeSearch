@@ -1,11 +1,15 @@
-import React, { FC } from 'react'
+import { FC, useMemo } from 'react'
+import { PokemonTypesName } from '../../interfaces/Pokemon'
 
 interface PokemonTypeProps {
-    name: string
+    name: PokemonTypesName
 }
 
+
+
 export const PokemonType: FC<PokemonTypeProps> = ({ name }) => {
+
     return (
-        <div className='text-black dark:text-white text-lg bg-red-200 rounded-lg px-2'>{name}</div>
+        <div className={`text-white text-stroke font-bold  bg-${name} text-lg rounded-lg px-2`}>{name}</div>
     )
 }

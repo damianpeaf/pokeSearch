@@ -25,7 +25,7 @@ export const PokemonGrid = () => {
     }
 
     return (
-        <section className='flex flex-col justify-center items-center py-10 gap-y-10'>
+        <section className='flex flex-col xl:flex-row xl:items-start xl:gap-x-4 xl:px-5 justify-center items-center py-10 gap-y-10'>
             <PokemonCard pokemon={pokemon} />
         </section>
     )

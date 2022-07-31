@@ -3,13 +3,17 @@ import { useSearch } from "../../hooks"
 import { FaSearchengin } from 'react-icons/fa'
 import { usePokemon } from '../../hooks/usePokemon';
 import Swal from "sweetalert2";
+import { FormEvent } from "react";
 
 export const SearchBar = () => {
 
     const { pokemonName, onInputChange } = useSearch();
     const { searchPokemon } = usePokemon();
 
-    const handleClick = () => {
+    const handleSubmmit = (e: FormEvent<HTMLFormElement>) => {
+
+        e.preventDefault();
+
         if (pokemonName.length >= 1) {
             searchPokemon(pokemonName);
         } else {
@@ -23,7 +27,7 @@ export const SearchBar = () => {
 
     return (
         <section>
-            <article className="flex justify-center items-center w-full ">
+            <form onSubmit={handleSubmmit} className="flex justify-center items-center w-full ">
                 <Input value={pokemonName} onChange={onInputChange} />
 
                 <button className='
@@ -38,12 +42,13 @@ export const SearchBar = () => {
                 rounded-tr-lg
                 rounded-br-lg 
                 '
-                    onClick={() => handleClick()}
+                    type="submit"
+
                 >
                     <FaSearchengin size={30} className="text-white hover:text-indigo-400 transition-colors" />
                 </button>
 
-            </article>
+            </form>
         </section>
     )
 }

@@ -1,0 +1,65 @@
+    const badgeColor = useMemo(() => {
+        switch (name) {
+            case 'bug':
+                return '#3B9950'
+
+            case 'dark':
+                return '#5A5979'
+
+            case 'dragon':
+                return '#61CAD9'
+
+            case 'electric':
+                return '#FBFB72'
+
+            case 'fairy':
+                return '#EA1369'
+
+
+            case 'fighting':
+                return '#EF6138'
+
+
+            case 'fire':
+                return '#FD4C5A'
+
+
+            case 'flying':
+                return '#93B2C7'
+
+
+            case 'ghost':
+                return '#906790'
+
+
+            case 'grass':
+                return '#27CB4F'
+
+            case 'ground':
+                return '#6E491F'
+
+            case 'ice':
+                return '#D8F0FA'
+
+            case 'normal':
+                return '#CA98A7'
+
+            case 'poison':
+                return '#9B69D9'
+
+            case 'psychic':
+                return '#F81C91'
+
+            case 'rock':
+                return '#8B3E21'
+
+            case 'steel':
+                return '#42BD94'
+
+            case 'water':
+                return '#86A8FC'
+
+            default:
+                return '#FD4C5A'
+        }
+    }, [name])
